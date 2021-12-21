@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AuxiliaryLifts">
+
+    <EditText
+        android:id="@+id/auxOHP"
+        android:layout_width="160dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Close grip bench ..."
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/squatAuxiliary1Text6" />
+
+    <EditText
+        android:id="@+id/auxDeadlift"
+        android:layout_width="160dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="DB Bench  ..."
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/squatAuxiliary1Text5" />
+
+    <TextView
+        android:id="@+id/squatAuxiliary1Text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Deadlift auxiliary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aux2Bench" />
+
+    <EditText
+        android:id="@+id/auxDeadliftMax"
+        android:layout_width="160dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="25 ..."
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/auxDeadlift"
+        app:layout_constraintTop_toBottomOf="@+id/aux2BenchMax" />
+
+    <TextView
+        android:id="@+id/squatAuxiliary1Text6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:text="OHP auxiliary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/auxDeadlift" />
+
+    <EditText
+        android:id="@+id/auxOHPMax"
+        android:layout_width="160dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="110 ..."
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/auxOHP"
+        app:layout_constraintTop_toBottomOf="@+id/auxDeadliftMax" />
+
+    <EditText
+        android:id="@+id/aux2Bench"
+        android:layout_width="160dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Close grip bench ..."
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/squatAuxiliary1Text4" />
+
+    <TextView
+        android:id="@+id/squatAuxiliary1Text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Bench Auxiliary 1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aux2Squat" />
+
+    <EditText
+        android:id="@+id/aux1Bench"
+        android:layout_width="160dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="DB Bench  ..."
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/squatAuxiliary1Text3" />
+
+    <EditText
+        android:id="@+id/aux1BenchMax"
+        android:layout_width="160dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="25 ..."
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/aux1Bench"
+        app:layout_constraintTop_toBottomOf="@+id/aux2SquatMax" />
+
+    <TextView
+        android:id="@+id/squatAuxiliary1Text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Bench Auxiliary 2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aux1Bench" />
+
+    <EditText
+        android:id="@+id/aux2BenchMax"
+        android:layout_width="160dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="110 ..."
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/aux2Bench"
+        app:layout_constraintTop_toBottomOf="@+id/aux1BenchMax" />
+
+    <EditText
+        android:id="@+id/aux2Squat"
+        android:layout_width="160dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Hack squat ..."
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/squatAuxiliary1Text2" />
+
+    <TextView
+        android:id="@+id/squatAuxiliary1Text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Squat Auxiliary 2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aux1Squat" />
+
+    <EditText
+        android:id="@+id/aux2SquatMax"
+        android:layout_width="160dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="120 ..."
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/aux2Squat"
+        app:layout_constraintTop_toBottomOf="@+id/aux1SquatMax" />
+
+    <TextView
+        android:id="@+id/VariationsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        android:text="Variations"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/variationsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="32dp"
+        android:text="Maxes"
+        app:layout_constraintStart_toEndOf="@+id/VariationsText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/squatAuxiliary1Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Squat Auxiliary 1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/VariationsText" />
+
+    <Button
+        android:id="@+id/week1Workouts_backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/auxOHP" />
+
+    <Button
+        android:id="@+id/submitAuxMaxesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="SUBMIT"
+        app:layout_constraintStart_toEndOf="@+id/week1Workouts_backButton"
+        app:layout_constraintTop_toBottomOf="@+id/auxOHP" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
+        android:text="NEXT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/submitAuxMaxesButton"
+        app:layout_constraintTop_toBottomOf="@+id/auxOHPMax" />
+
+    <EditText
+        android:id="@+id/aux1Squat"
+        android:layout_width="160dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Hack squat ..."
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/squatAuxiliary1Text" />
+
+    <EditText
+        android:id="@+id/aux1SquatMax"
+        android:layout_width="160dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="100 ..."
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/aux1Squat"
+        app:layout_constraintTop_toBottomOf="@+id/variationsText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

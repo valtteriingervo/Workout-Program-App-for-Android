@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_lifts"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <TextView
+        android:id="@+id/mainMaxes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="@string/maxes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <TextView
+        android:id="@+id/mainMaxes2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:text="@string/current_main_maxes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <TextView
+        android:id="@+id/mainMaxes3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginBottom="7dp"
+        android:text="Current lifts and"
+        app:layout_constraintBottom_toTopOf="@+id/mainMaxes2"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/mainSquat"
+        android:layout_width="101dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/mainSquat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/mainBench"
+        android:layout_width="99dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/mainBench"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainSquat" />
+
+    <EditText
+        android:id="@+id/mainDeadlift"
+        android:layout_width="99dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/mainDeadlift"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainBench" />
+
+    <EditText
+        android:id="@+id/mainOHP"
+        android:layout_width="101dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/mainOHP"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainDeadlift" />
+
+    <EditText
+        android:id="@+id/mainSquatMax"
+        android:layout_width="75dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="140"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/mainSquat"
+        app:layout_constraintTop_toBottomOf="@+id/mainMaxes" />
+
+    <EditText
+        android:id="@+id/mainBenchMax"
+        android:layout_width="75dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:hint="@string/mainBenchMax"
+        app:layout_constraintStart_toEndOf="@+id/mainBench"
+        app:layout_constraintTop_toBottomOf="@+id/mainSquatMax" />
+
+    <EditText
+        android:id="@+id/mainDeadLiftMax"
+        android:layout_width="75dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:hint="@string/mainDeadliftMax"
+        app:layout_constraintStart_toEndOf="@+id/mainDeadlift"
+        app:layout_constraintTop_toBottomOf="@+id/mainBenchMax" />
+
+    <EditText
+        android:id="@+id/mainOHPMax"
+        android:layout_width="75dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:hint="@string/mainOHPMax"
+        app:layout_constraintStart_toEndOf="@+id/mainOHP"
+        app:layout_constraintTop_toBottomOf="@+id/mainDeadLiftMax" />
+
+    <Button
+        android:id="@+id/mainInfoNextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="188dp"
+        android:text="Next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainOHP" />
+
+    <Button
+        android:id="@+id/submitMaxesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="188dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mainInfoNextButton"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainOHP"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/deadliftMainName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="9dp"
+        android:text="This should change"
+        app:layout_constraintBottom_toTopOf="@+id/displayCurrentMainDeadliftMax"
+        app:layout_constraintStart_toEndOf="@+id/mainDeadLiftMax"
+        app:layout_constraintTop_toBottomOf="@+id/displayCurrentMainBenchMax" />
+
+    <TextView
+        android:id="@+id/displayCurrentMainDeadliftMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="44dp"
+        android:text="This should change"
+        app:layout_constraintStart_toEndOf="@+id/mainDeadLiftMax"
+        app:layout_constraintTop_toBottomOf="@+id/displayCurrentMainBenchMax" />
+
+    <TextView
+        android:id="@+id/squatMainName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="8dp"
+        android:text="This should change"
+        app:layout_constraintBottom_toTopOf="@+id/displayCurrentMainSquatMax"
+        app:layout_constraintStart_toEndOf="@+id/mainSquatMax"
+        app:layout_constraintTop_toBottomOf="@+id/mainMaxes2" />
+
+    <TextView
+        android:id="@+id/displayCurrentMainSquatMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="80dp"
+        android:text="This should change"
+        app:layout_constraintStart_toEndOf="@+id/mainSquatMax"
+        app:layout_constraintTop_toBottomOf="@+id/mainMaxes2" />
+
+    <TextView
+        android:id="@+id/benchMainName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="9dp"
+        android:text="This should change"
+        app:layout_constraintBottom_toTopOf="@+id/displayCurrentMainBenchMax"
+        app:layout_constraintStart_toEndOf="@+id/mainBenchMax"
+        app:layout_constraintTop_toBottomOf="@+id/displayCurrentMainSquatMax" />
+
+    <TextView
+        android:id="@+id/displayCurrentMainBenchMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="52dp"
+        android:text="This should change"
+        app:layout_constraintStart_toEndOf="@+id/mainBenchMax"
+        app:layout_constraintTop_toBottomOf="@+id/displayCurrentMainSquatMax" />
+
+    <TextView
+        android:id="@+id/displayCurrentMainOHPMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="44dp"
+        android:text="This should change"
+        app:layout_constraintStart_toEndOf="@+id/mainOHPMax"
+        app:layout_constraintTop_toBottomOf="@+id/displayCurrentMainDeadliftMax" />
+
+    <TextView
+        android:id="@+id/OHPMainName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="9dp"
+        android:text="This should change"
+        app:layout_constraintBottom_toTopOf="@+id/displayCurrentMainOHPMax"
+        app:layout_constraintStart_toEndOf="@+id/mainOHPMax"
+        app:layout_constraintTop_toBottomOf="@+id/displayCurrentMainDeadliftMax" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
