@@ -14,76 +14,7 @@ import kotlin.math.roundToInt
 // to be used only in Activities
 // This way we can call it in Activities without passing any parameters
 // such as: loadMainMaxes
-fun Activity.loadMainMaxes(i: Int): String? {
-    val sharedPreferences = getSharedPreferences("sharedMaxes", Context.MODE_PRIVATE)
 
-    val savedSquatMax = sharedPreferences.getString("MAIN_SQUAT_MAX", "140")
-    val savedBenchMax = sharedPreferences.getString("MAIN_BENCH_MAX", "100")
-    val savedDeadliftMax = sharedPreferences.getString("MAIN_DEADLIFT_MAX", "180")
-    val savedOHPMax = sharedPreferences.getString("MAIN_OHP_MAX", "60")
-
-    val savedMaxes = arrayOf(savedSquatMax, savedBenchMax, savedDeadliftMax, savedOHPMax)
-
-    return savedMaxes[i]
-
-    // We probably can't simply pass the view id to this function
-    // this function should most likely just return the main maxes in an array
-    // If we want to manipulate views directly from the function that should be a separate one?
-    // we'll figure this out next
-}
-
-fun Activity.loadMainNames(i: Int): String? {
-    val sharedPreferences = getSharedPreferences("sharedMaxes", Context.MODE_PRIVATE)
-    val savedSquat = sharedPreferences.getString("MAIN_SQUAT", "High Bar Squat")
-    val savedBench = sharedPreferences.getString("MAIN_BENCH", "Close Grip Bench")
-    val savedDeadlift = sharedPreferences.getString("MAIN_DEADLIFT", "Block Pulls")
-    val savedOHP = sharedPreferences.getString("MAIN_OHP", "OHP")
-
-    val savedNames = arrayOf(savedSquat, savedBench, savedDeadlift, savedOHP)
-
-    return savedNames[i]
-}
-
-fun Activity.loadAuxNames(i: Int): String? {
-    val sharedPreferences = getSharedPreferences("sharedMaxes", Context.MODE_PRIVATE)
-
-    val savedSquatAux1Name = sharedPreferences.getString("AUX1_SQUAT", "Leg Press")
-    val savedSquatAux2Name = sharedPreferences.getString("AUX2_SQUAT", "Hack Squat")
-
-    val savedBenchAux1Name = sharedPreferences.getString("AUX1_BENCH", "Incline Bench")
-    val savedBenchAux2Name = sharedPreferences.getString("AUX2_BENCH", "DB Bench")
-
-    val savedDeadliftAuxName = sharedPreferences.getString("AUX_DEADLIFT", "RDL")
-
-    val savedOHPAuxName = sharedPreferences.getString("AUX_OHP", "DB OHP")
-
-    val savedAuxNames = arrayOf(savedSquatAux1Name, savedSquatAux2Name, savedBenchAux1Name,
-        savedBenchAux2Name, savedDeadliftAuxName, savedOHPAuxName)
-
-    return savedAuxNames[i]
-
-
-}
-
-fun Activity.loadAuxMaxes(@IntRange(from = 0, to = 5) i: Int): String? {
-    val sharedPreferences = getSharedPreferences("sharedMaxes", Context.MODE_PRIVATE)
-
-    val savedSquatAux1Max = sharedPreferences.getString("AUX1_SQUAT_MAX", "140")
-    val savedSquatAux2Max = sharedPreferences.getString("AUX2_SQUAT_MAX", "140")
-
-    val savedBenchAux1Max = sharedPreferences.getString("AUX1_BENCH_MAX", "100")
-    val savedBenchAux2Max = sharedPreferences.getString("AUX2_BENCH_MAX", "100")
-
-    val savedDeadliftAuxMax = sharedPreferences.getString("AUX_DEADLIFT_MAX", "180")
-
-    val savedOHPAuxMax = sharedPreferences.getString("AUX_OHP_MAX", "60")
-
-
-    val savedAuxMaxes = arrayOf(savedSquatAux1Max, savedSquatAux2Max, savedBenchAux1Max,
-        savedBenchAux2Max, savedDeadliftAuxMax, savedOHPAuxMax)
-
-    return savedAuxMaxes[i]
-}
 
 // This is to simulate the 'mround' function found on Excel and Google Sheets
 fun Activity.mround(value: Double, factor: Double): Double {
@@ -199,4 +130,20 @@ fun Activity.movementName(@IntRange(from = 1, to = 5) dayNumber: Int, @IntRange(
     // Here we use the Elvis operator again
     return sharedPreferences.getString(movementType, "Default Movement Name") ?: "Another Default Movement Name"
 
+}
+
+// Function for fetching the movement type (mainSquat, aux2Bench, mainDeadlift etc.)
+// Needed to create entries in the Workout-table
+fun Activity.getMovementType(day: Int, movementOrder: Int): String {
+    val firstMovTypes = mapOf(1 to "mainSquat", 2 to "mainBench", 3 to "mainDeadlift", 4 to "mainOHP", 5 to "aux2Bench")
+    val secondMovTypes = mapOf(1 to "auxOHP", 2 to "aux1Squat", 3 to "aux1Bench", 4 to "aux2Squat", 5 to "auxDeadlift")
+
+    return if (movementOrder == 1) {
+        // ?: is called the Elvis operator => You can use it instead of writing a complete if expression
+        // If the expression to the left of ?: is not null, the Elvis operator returns it, otherwise it returns the expression to the right
+        firstMovTypes[day] ?: "mainSquat"
+    }
+    else {
+        secondMovTypes[day] ?: "auxOHP"
+    }
 }

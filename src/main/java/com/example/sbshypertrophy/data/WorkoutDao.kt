@@ -12,6 +12,6 @@ interface WorkoutDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addWorkout(workout: Workout)
 
-    @Query("SELECT * FROM workout_table ORDER BY id ASC")
+    @Query("SELECT * FROM workout_table")
     fun readAllData(): LiveData<List<Workout>>
 }

@@ -119,8 +119,8 @@ class DisplayWorkout : AppCompatActivity() {
         //val mov1MaxEffectValue = lastSetRepsEffectOnMaxValue(mov1RepsInt, mov1repOut)
 
         // The Room library will handle id creation. We just need to pass a '0' in id field
-        val workout = Workout(0, week, day, true, mov1tm, mov2tm, mov1type, mov2type)
-        wvm.addWorkout(workout)
+        //val workout = Workout(0, week, day, true, mov1tm, mov2tm, mov1type, mov2type)
+        //wvm.addWorkout(workout)
         Toast.makeText(this,"Successfully logged workout", Toast.LENGTH_SHORT).show()
     }
 
