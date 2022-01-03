@@ -13,7 +13,6 @@ import kotlin.math.roundToInt
 // Extension function on Activity class (we don't need to pass Context parameter)
 // to be used only in Activities
 // This way we can call it in Activities without passing any parameters
-// such as: loadMainMaxes
 
 
 // This is to simulate the 'mround' function found on Excel and Google Sheets
@@ -21,7 +20,7 @@ fun Activity.mround(value: Double, factor: Double): Double {
     return ((value / factor).roundToInt() * factor)
 }
 
-fun isMovementMain(dayNumber: Int, movementOrder: Int): Boolean {
+fun Activity.isMovementMain(dayNumber: Int, movementOrder: Int): Boolean {
     return if (movementOrder == 1) {
         // The only case where the first movement isn't a main movement is one day 5,
         // Thus 5 != 5 would be false, otherwise this is true
@@ -62,7 +61,7 @@ fun Activity.repOutTarget(weekNumber: Int, dayNumber: Int, movementOrder: Int): 
 }
 
 // Returns the intensity to be used based the week and movement type (main or aux)
-fun intensity(weekNumber: Int, main: Boolean): Double? {
+fun Activity.intensity(weekNumber: Int, main: Boolean): Double? {
     val mainIntensityMap = mapOf(1 to 0.70, 2 to 0.725, 3 to 0.75, 4 to 0.725, 5 to 0.75, 6 to 0.775)
     val auxIntensityMap = mapOf(1 to 0.65, 2 to 0.675, 3 to 0.70, 4 to 0.675, 5 to 0.70, 6 to 0.725)
     return if (main) {

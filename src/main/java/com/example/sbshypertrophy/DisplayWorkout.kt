@@ -32,8 +32,6 @@ class DisplayWorkout : AppCompatActivity() {
         val userDayNumber = intent.getIntExtra("dayNumber", 6)
 
 
-        // THESE WORK
-        // Fetch the movement names, first movement 1
         val mov1name = movementName(userDayNumber, 1)
         // Then movement 2 name
         val mov2name = movementName(userDayNumber, 2)
@@ -43,7 +41,6 @@ class DisplayWorkout : AppCompatActivity() {
 
         val roundingAmount = 2.5
 
-        // THESE WORK NOW
         val mov1weight = movementWeight(userWeekNumber, userDayNumber, 1, roundingAmount)
         val mov2weight = movementWeight(userWeekNumber, userDayNumber, 2, roundingAmount)
 
